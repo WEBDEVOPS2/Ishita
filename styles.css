@@ -1,0 +1,292 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Header Styling */
+.header {
+    background-image: url('path-to-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay */
+    z-index: -1;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* About Section */
+.about {
+    background-color: #ffffff;
+    padding: 40px 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-img {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* My Work Section */
+.my-work {
+    background-color: #f0f0f0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.my-work h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.my-work p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.work-gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.work-item {
+    width: 30%;
+    text-align: center;
+}
+
+.work-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.work-item img:hover {
+    transform: scale(1.05); /* Slightly enlarge image */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.work-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact ul {
+    list-style-type: none;
+    font-size: 1.1rem;
+}
+
+.contact ul li {
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer svg {
+    margin-top: 10px;
+}
+
+/* Mobile View Enhancements (Media Queries) */
+@media (max-width: 768px) {
+    /* Header */
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-text {
+        flex: 1;
+    }
+
+    /* My Work Section */
+    .work-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    /* Contact Section */
+    .contact ul {
+        padding-left: 0;
+    }
+
+    .contact ul li {
+        font-size: 1rem;
+    }
+
+    .contact a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Small Mobile View Enhancements (Media Queries) */
+@media (max-width: 480px) {
+    /* Header */
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    /* About Section */
+    .about h2 {
+        font-size: 1.8rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    /* My Work Section */
+    .my-work h2 {
+        font-size: 1.8rem;
+    }
+
+    .my-work p {
+        font-size: 1rem;
+    }
+
+    .work-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-item {
+        width: 90%;
+    }
+
+    /* Contact Section */
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact p {
+        font-size: 1rem;
+    }
+}
